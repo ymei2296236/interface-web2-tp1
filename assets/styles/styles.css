@@ -1,0 +1,50 @@
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	padding: 8vw;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+main {
+	display: flex;
+	gap: 2rem;
+}
+aside {
+	flex: 1;
+}
+
+ul {
+	padding-left: 0;
+}
+
+li {
+	list-style: none;
+	padding-bottom: 1rem;
+}
+
+img {
+	width: 100%;
+}
+
+.grille {
+	display: grid;
+	flex: 3;
+}
+
+.grille--3 {
+	gap: 4rem;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.livre {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
