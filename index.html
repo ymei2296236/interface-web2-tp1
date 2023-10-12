@@ -21,17 +21,42 @@
 
 		<main>
 			<aside>
-				<ul>
-					<li>Tous</li>
-					<li>Nouveautés</li>
-					<li>Littérature</li>
-					<li>Art de vivre</li>
-					<li>BD, Jeunesse, Humour</li>
-					<li>Culture et société</li>
-					<li>Savoir et science</li>
+				<ul data-js-control-filtres>
+					<li data-js-filtre="tous">Tous</li>
+					<li data-js-filtre="nouveaute">Nouveautés</li>
+					<li
+						data-js-filtre="categorie"
+						data-js-categorie="Littérature"
+					>
+						Littérature
+					</li>
+					<li
+						data-js-filtre="categorie"
+						data-js-categorie="Art de vivre"
+					>
+						Art de vivre
+					</li>
+					<li
+						data-js-filtre="categorie"
+						data-js-categorie="BD, Jeunesse, Humour"
+					>
+						BD, Jeunesse, Humour
+					</li>
+					<li
+						data-js-filtre="categorie"
+						data-js-categorie="Culture et société"
+					>
+						Culture et société
+					</li>
+					<li
+						data-js-filtre="categorie"
+						data-js-categorie="Savoir et science"
+					>
+						Savoir et science
+					</li>
 				</ul>
 			</aside>
-			<div class="grille grille--3" data-js-livres></div>
+			<div class="grille grille--3" data-js-control-livres></div>
 		</main>
 	</body>
 </html>

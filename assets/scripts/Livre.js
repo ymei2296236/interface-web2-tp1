@@ -1,6 +1,6 @@
 export default class Livre {
 	_el;
-	_elWrapper;
+	_elControlLivres;
 
 	constructor(el) {
 		this._el = el;
@@ -13,7 +13,9 @@ export default class Livre {
 		this._image = this._el.image;
 		this._nouveaute = this._el.nouveaute;
 		this._categorie = this._el.categorie;
-		this._elwrapper = document.querySelector("[data-js-livres]");
+		this._elControlLivres = document.querySelector(
+			"[data-js-control-livres]"
+		);
 		this._elImg = document.createElement("div");
 
 		this.init();
@@ -25,17 +27,17 @@ export default class Livre {
 
 	creeDom() {
 		let dom = `
-                    <article class="livre" data-js-index>
+                    <article class="livre" data-js-categorie="${this._categorie}">
                         <img src="${this._image}" alt="Image de ${this._titre}"></img>
                         <div>
                         <p>${this._titre}</p>
-                        <div>
-                            <small>${this._prix}</small>
-                            <button>Ajouter</button>
+                        <div class="livre__flex">
+                            <small class="livre__prix">${this._prix} $</small>
+                            <button class="livre__button">Ajouter</button>
                         </div>
                         </div>
                     </article>
         `;
-		this._elwrapper.insertAdjacentHTML("beforeend", dom);
+		this._elControlLivres.insertAdjacentHTML("beforeend", dom);
 	}
 }

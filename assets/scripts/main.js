@@ -1,8 +1,7 @@
-import { livres } from "./livres.js";
-import Livre from "./Livre.js";
+import Filtre from "./Filtre.js";
 
 window.addEventListener("DOMContentLoaded", function () {
-	for (let i = 0, l = livres.length; i < l; i++) {
-		new Livre(livres[i]);
-	}
+	let elWrapperFiltre = document.querySelector("[data-js-control-filtres]");
+
+	new Filtre(elWrapperFiltre);
 });
