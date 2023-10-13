@@ -20,43 +20,53 @@
 		</header>
 
 		<main>
-			<aside>
-				<ul data-js-control-filtres>
-					<li data-js-filtre="tous">Tous</li>
-					<li data-js-filtre="nouveaute">Nouveautés</li>
-					<li
-						data-js-filtre="categorie"
-						data-js-categorie="Littérature"
-					>
-						Littérature
-					</li>
-					<li
-						data-js-filtre="categorie"
-						data-js-categorie="Art de vivre"
-					>
-						Art de vivre
-					</li>
-					<li
-						data-js-filtre="categorie"
-						data-js-categorie="BD, Jeunesse, Humour"
-					>
-						BD, Jeunesse, Humour
-					</li>
-					<li
-						data-js-filtre="categorie"
-						data-js-categorie="Culture et société"
-					>
-						Culture et société
-					</li>
-					<li
-						data-js-filtre="categorie"
-						data-js-categorie="Savoir et science"
-					>
-						Savoir et science
-					</li>
-				</ul>
-			</aside>
-			<div class="grille grille--3" data-js-control-livres></div>
+			<div class="modal modal--ferme" data-js-modal>
+				<button class="modal__button">Test</button>
+				<div class="modal__contenu" data-js-modal-contenu></div>
+			</div>
+			<div class="flex">
+				<aside class="flex__aside">
+					<ul data-js-control-filtres>
+						<li data-js-filtre="tous">Tous</li>
+						<li data-js-filtre="nouveaute">Nouveautés</li>
+						<li
+							data-js-filtre="categorie"
+							data-js-categorie="Littérature"
+						>
+							Littérature
+						</li>
+						<li
+							data-js-filtre="categorie"
+							data-js-categorie="Art de vivre"
+						>
+							Art de vivre
+						</li>
+						<li
+							data-js-filtre="categorie"
+							data-js-categorie="BD, Jeunesse, Humour"
+						>
+							BD, Jeunesse, Humour
+						</li>
+						<li
+							data-js-filtre="categorie"
+							data-js-categorie="Culture et société"
+						>
+							Culture et société
+						</li>
+						<li
+							data-js-filtre="categorie"
+							data-js-categorie="Savoir et science"
+						>
+							Savoir et science
+						</li>
+					</ul>
+				</aside>
+
+				<div
+					class="flex__grille flex__grille--3"
+					data-js-control-livres
+				></div>
+			</div>
 		</main>
 	</body>
 </html>

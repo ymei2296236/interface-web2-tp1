@@ -1,66 +1,11 @@
-* {
-	box-sizing: border-box;
-	font-family: sans-serif;
-}
+/* GENERIC */
+@import "./3-generic/generic.css";
 
-body {
-	padding: 8vw;
-}
+/* ELEMENTS */
+@import "./4-elements/elements.css";
 
-header {
-	display: flex;
-	justify-content: space-between;
-}
+/* OBJECTS */
+@import "./5-objects/objects.css";
 
-main {
-	display: flex;
-	gap: 2rem;
-}
-aside {
-	flex: 1;
-}
-
-ul {
-	padding-left: 0;
-}
-
-li {
-	list-style: none;
-	padding-bottom: 1rem;
-}
-
-img {
-	width: 100%;
-}
-
-.grille {
-	display: grid;
-	flex: 3;
-}
-
-.grille--3 {
-	gap: 4rem;
-	grid-template-columns: repeat(3, 1fr);
-}
-
-.livre {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.livre__flex {
-	display: flex;
-	justify-content: space-between;
-}
-.livre__prix {
-	font-size: 1rem;
-	font-weight: 600;
-}
-
-.livre__button {
-	border: 1px solid black;
-	padding: 0.3rem 0.5rem;
-	background-color: white;
-	font-weight: 600;
-}
+/* COMPONENTS */
+@import "./6-components/components.css";

@@ -1,0 +1,83 @@
+/* COMPONENTS */
+
+.flex {
+	display: flex;
+	gap: 2rem;
+}
+
+.flex__aside {
+	flex: 1;
+}
+
+.flex__grille {
+	display: grid;
+	flex: 3;
+}
+
+.flex__grille--3 {
+	gap: 4rem;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.livre {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.livre__flex {
+	display: flex;
+	justify-content: space-between;
+}
+.livre__prix {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.livre__button {
+	border: 1px solid black;
+	padding: 0.3rem 0.5rem;
+	background-color: white;
+	font-weight: 600;
+}
+
+.liActive {
+	color: red;
+}
+
+.modal {
+	/* align-items: center; */
+	background-color: rgba(0, 0, 0, 0.9);
+	/* display: flex; */
+	height: 100%;
+	left: 0;
+	margin: 0;
+	padding: 12vw;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.modal--ferme {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.modal--ouvert {
+	opacity: 1;
+}
+
+.modal__contenu {
+	background-color: white;
+	padding: 4rem;
+	display: flex;
+	gap: 4rem;
+}
+
+.modal__texte {
+	flex: 1;
+}
+
+.modal__img {
+	flex: 1;
+}

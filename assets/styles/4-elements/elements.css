@@ -1,0 +1,36 @@
+/* ELEMENTS */
+
+body {
+	padding: 8vw;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+ul {
+	padding-left: 0;
+}
+
+li {
+	cursor: pointer;
+	list-style: none;
+	padding-bottom: 1rem;
+}
+
+li:hover {
+	text-decoration: solid underline black 2.5px;
+	text-underline-offset: 0.3rem;
+}
+
+li:visited {
+	color: yellow;
+}
+p {
+	line-height: 1.5rem;
+}
+
+img {
+	width: 100%;
+}

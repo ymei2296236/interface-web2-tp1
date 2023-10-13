@@ -16,7 +16,7 @@ export default class Filtre {
 
 	init() {
 		for (let i = 0, l = 12; i < l; i++) {
-			new Livre(livres[i]);
+			new Livre(livres[i], i);
 		}
 		this.controleFiltres();
 	}
@@ -28,26 +28,30 @@ export default class Filtre {
 				function () {
 					this._elControlLivres.innerHTML = "";
 
+					// if (this._elsFiltre[i].classList.contains("liActive")) {
+					// 	this._elsFiltre[i].classList.remove("liActive");
+					// } else this._elsFiltre[i].classList.add("liActive");
+
 					let nomFiltre = this._elsFiltre[i].dataset.jsFiltre,
 						nomCategorie = this._elsFiltre[i].dataset.jsCategorie;
 
 					if (nomFiltre == "tous") {
 						for (let i = 0, l = livres.length; i < l; i++) {
-							new Livre(livres[i]);
+							new Livre(livres[i], i);
 						}
 					}
 
 					if (nomFiltre == "nouveaute") {
 						for (let i = 0, l = livres.length; i < l; i++) {
 							if (livres[i][nomFiltre] == true)
-								new Livre(livres[i]);
+								new Livre(livres[i], i);
 						}
 					}
 
 					if (nomFiltre == "categorie" && nomCategorie) {
 						for (let i = 0, l = livres.length; i < l; i++) {
 							if (livres[i].categorie == nomCategorie)
-								new Livre(livres[i]);
+								new Livre(livres[i], i);
 						}
 					}
 				}.bind(this)
