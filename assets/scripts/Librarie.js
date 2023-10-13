@@ -1,7 +1,7 @@
 import { livres } from "./livres.js";
 import Livre from "./Livre.js";
 
-export default class Filtre {
+export default class Librarie {
 	constructor(el) {
 		this._el = el;
 		this._elsFiltre = this._el.querySelectorAll("[data-js-filtre]");

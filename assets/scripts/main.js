@@ -1,7 +1,10 @@
-import Filtre from "./Filtre.js";
-import Modal from "./Modal.js";
+import Librarie from "./Librarie.js";
+import Panier from "./Panier.js";
 
 window.addEventListener("DOMContentLoaded", function () {
 	let elWrapperFiltre = document.querySelector("[data-js-control-filtres]");
-	new Filtre(elWrapperFiltre);
+	new Librarie(elWrapperFiltre);
+
+	let elWrapperLivres = document.querySelector("[data-js-control-livres]");
+	new Panier(elWrapperLivres);
 });

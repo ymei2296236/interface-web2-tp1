@@ -8,18 +8,12 @@ export default class Livre {
 		this._el = el;
 		this._indexLivre = indexLivre;
 		this._titre = this._el.titre;
-		// this._auteur = this._el.auteur;
-		// this._description = this._el.description;
 		this._prix = this._el.prix;
-		// this._editeur = this._el.editeur;
-		// this._pages = this._el.pages;
 		this._image = this._el.image;
-		this._nouveaute = this._el.nouveaute;
 		this._categorie = this._el.categorie;
 		this._elControlLivres = document.querySelector(
 			"[data-js-control-livres]"
 		);
-		this._elImg = document.createElement("div");
 
 		this.init();
 	}

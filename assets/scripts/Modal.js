@@ -7,6 +7,14 @@ export default class Modal {
 		this._indexLivre = this._el.dataset.jsCategorie.slice(
 			this._el.dataset.jsCategorie.indexOf("|") + 1
 		);
+		this._image = livres[this._indexLivre].image;
+		this._titre = livres[this._indexLivre].titre;
+		this._auteur = livres[this._indexLivre].auteur;
+		this._editeur = livres[this._indexLivre].editeur;
+		this._pages = livres[this._indexLivre].pages;
+		this._prix = livres[this._indexLivre].prix;
+		this._description = livres[this._indexLivre].description;
+
 		this._elDivModal = document.querySelector("[data-js-modal]");
 		this._elContenuModal = document.querySelector(
 			"[data-js-modal-contenu]"
@@ -14,7 +22,6 @@ export default class Modal {
 		this._elHTML = document.documentElement;
 		this._elBody = document.body;
 		this._fermeModal = this.fermeModal.bind(this);
-
 		this.init();
 	}
 
@@ -23,21 +30,16 @@ export default class Modal {
 			"click",
 			function (e) {
 				let elTarget = e.target;
-				console.log(e.target);
-				// e.stopPropagation();
-				if (elTarget.hasAttribute("data-js-buton"))
-					this.ajouteAuPanier();
-				else this.afficheModal();
+
+				if (!elTarget.hasAttribute("data-js-buton")) {
+					this.afficheModal();
+				}
 			}.bind(this)
 		);
-
-		// this._el.addEventListener("click", this.afficheModal.bind(this));
 	}
 
-	// this._btnAjouter.addEventListener("click", this.ajouteAuPanier);
-
 	afficheModal() {
-		console.log(this._indexLivre);
+		// console.log(this._indexLivre);
 		this._elHTML.classList.add("overflow-y-hidden");
 		this._elBody.classList.add("overflow-y-hidden");
 
@@ -50,13 +52,6 @@ export default class Modal {
 	}
 
 	injecteDom() {
-		this._image = livres[this._indexLivre].image;
-		this._titre = livres[this._indexLivre].titre;
-		this._auteur = livres[this._indexLivre].auteur;
-		this._editeur = livres[this._indexLivre].editeur;
-		this._pages = livres[this._indexLivre].pages;
-		this._description = livres[this._indexLivre].description;
-
 		let dom = `
                         <div class="modal__img">
 							<img src="${this._image}" alt="Image de ${this._titre}"></img>
@@ -78,9 +73,5 @@ export default class Modal {
 			this._elHTML.classList.remove("overflow-y-hidden");
 			this._elBody.classList.remove("overflow-y-hidden");
 		}
-	}
-
-	ajouteAuPanier() {
-		console.log("buttnib");
 	}
 }
