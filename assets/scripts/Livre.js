@@ -40,7 +40,7 @@ export default class Livre {
                         <p>${this._titre}</p>
                         <div class="livre__flex">
                             <small class="livre__prix">${this._prix} $</small>
-                            <button class="livre__button" data-js-buton>Ajouter</button>
+                            <button class="livre__button" data-js-bouton>Ajouter</button>
                         </div>
                         </div>
                     </article>
@@ -54,8 +54,7 @@ export default class Livre {
 
 	gereLivre(e) {
 		let elTarget = e.target;
-		console.log(e.target);
-		if (elTarget.hasAttribute("data-js-buton")) {
+		if (elTarget.hasAttribute("data-js-bouton")) {
 			this._elLivreDataset =
 				elTarget.closest("article").dataset.jsCategorie;
 			this._indexLivre = this._elLivreDataset.slice(
@@ -113,8 +112,7 @@ export default class Livre {
 		} else {
 			this._aPanier = JSON.parse(localStorage.panier);
 		}
-		this._aPanier[this._titre] = `${this._prix} $`;
-		console.log(this._aPanier);
+		this._aPanier[this._titre] = `${this._prix}`;
 
 		localStorage.setItem("panier", JSON.stringify(this._aPanier));
 	}

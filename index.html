@@ -16,15 +16,24 @@
 	<body>
 		<header>
 			<h1>TP 1</h1>
-			<div data-js-panier>Panier</div>
+			<section class="panier" data-js-panier>
+				<span class="panier__icon" data-js-panier-bouton>Panier</span>
+				<div
+					class="panier__detail panier__detail--ferme"
+					data-js-detail
+				>
+					What
+				</div>
+			</section>
 		</header>
 
 		<main>
-			<div class="modal modal--ferme" data-js-modal>
+			<section class="modal modal--ferme" data-js-modal>
 				<button class="modal__button">Test</button>
 				<div class="modal__contenu" data-js-modal-contenu></div>
-			</div>
-			<div class="flex">
+			</section>
+
+			<section class="flex">
 				<aside class="flex__aside">
 					<ul data-js-control-filtres>
 						<li data-js-filtre="tous">Tous</li>
@@ -66,7 +75,7 @@
 					class="flex__grille flex__grille--3"
 					data-js-control-livres
 				></div>
-			</div>
+			</section>
 		</main>
 	</body>
 </html>

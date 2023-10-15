@@ -81,3 +81,29 @@
 .modal__img {
 	flex: 1;
 }
+
+/* .panier {
+	position: sticky;
+} */
+
+.panier__detail {
+	position: absolute;
+	right: 6vw;
+	/* width: 22rem; */
+	border: 1px solid black;
+	background-color: white;
+	padding: 1rem;
+	margin-top: 1rem;
+}
+
+.panier__detail--ferme {
+	opacity: 0;
+}
+
+.panier__detail--ouvert {
+	opacity: 1;
+}
+
+.panier__somme {
+	font-weight: bold;
+}
