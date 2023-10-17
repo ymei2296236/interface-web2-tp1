@@ -28,6 +28,13 @@ export default class Librarie {
 				function () {
 					this._elControlLivres.innerHTML = "";
 
+					let filtreActive = document.querySelector(".liActive");
+
+					if (filtreActive !== null) {
+						filtreActive.classList.remove("liActive");
+					}
+					this._elsFiltre[i].classList.add("liActive");
+
 					// if (this._elsFiltre[i].classList.contains("liActive")) {
 					// 	this._elsFiltre[i].classList.remove("liActive");
 					// } else this._elsFiltre[i].classList.add("liActive");

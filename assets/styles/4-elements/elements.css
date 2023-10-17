@@ -24,9 +24,6 @@ li:hover {
 	text-underline-offset: 0.3rem;
 }
 
-li:visited {
-	color: yellow;
-}
 p {
 	line-height: 1.5rem;
 }
