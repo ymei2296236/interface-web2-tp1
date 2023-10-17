@@ -44,11 +44,12 @@ export default class Panier {
 				`;
 		} else {
 			this._aPanier = JSON.parse(localStorage.panier);
+			let nbLivre = Object.keys(this._aPanier).length;
 			this._elPanierDetail.innerHTML = `
 											<table>
 												<thead>
 													<tr>
-													<th>Livre</th>
+													<th>Livre${nbLivre > 1 ? "s" : ""}</th>
 													<th>Prix</th>
 													</tr>
 												</thead>
