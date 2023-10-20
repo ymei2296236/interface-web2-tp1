@@ -41,7 +41,7 @@
 	font-weight: 600;
 }
 
-.liActive {
+.filtreActive {
 	text-decoration: solid underline black 2.5px;
 	text-underline-offset: 0.3rem;
 }
@@ -115,7 +115,7 @@
 	opacity: 1;
 }
 
-.panier__somme {
+.panier__prixTotal {
 	font-weight: bold;
 }
 
@@ -126,3 +126,4 @@
 	width: 30px;
 	height: 30px;
 }
+
