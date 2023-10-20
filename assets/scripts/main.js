@@ -1,4 +1,4 @@
-import {appelleTest} from "../tests/appelleTests.test.js";
+import { appelleTest } from "../tests/appelleTests.test.js";
 import Librarie from "./Librarie.js";
 import Panier from "./Panier.js";
 
@@ -13,5 +13,5 @@ window.addEventListener("DOMContentLoaded", function () {
     /**
      * Appelle les tests automatisés
      */
-	// appelleTest();
+	appelleTest();
 });

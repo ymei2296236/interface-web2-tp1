@@ -22,6 +22,34 @@
 	opacity: 1;
 }
 
+.modal__icon::before {
+	content: "";
+	background: linear-gradient(
+			transparent,
+			transparent 14px,
+			white 14px,
+			white,
+			16px,
+			transparent 16px
+		),
+		linear-gradient(
+			to right,
+			transparent,
+			transparent 14px,
+			white 14px,
+			white,
+			16px,
+			transparent 16px
+		);
+	height: 30px;
+	right: 30px;
+	top: 30px;
+	position: absolute;
+	transform: rotate(45deg);
+	transition: transform 0.3s ease;
+	width: 30px;
+}
+
 .modal__contenu {
 	display: flex;
 	background-color: white;
